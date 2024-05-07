@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -102,6 +103,24 @@ class MainWindow : Window
         {
             SwapBlock(bx, by, bx + 1, by);
         }
+        else if (bx > 0 && board[by, bx -1 ] == EMPTY) // left is empty
+        {
+            SwapBlock(bx, by, bx - 1, by);
+        }
+        else if(by < COUNT - 1 && board[by + 1, bx] == EMPTY) // down is empty
+        {
+            SwapBlock(bx, by, bx, by + 1);
+        }
+        else if(by > 0 && board[by-1, bx] == EMPTY) // top is empty
+        {
+            SwapBlock(bx, by, bx, by-1);
+        }
+        else
+        {
+            SystemSounds.Beep.Play();
+            return;
+        }
+        // 한번이라도 이동한 경우, 다 맞추었는지 확인!!
     }
 
 
