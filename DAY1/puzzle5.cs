@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Media;
+using System.Security.Cryptography.Xml;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -123,7 +124,42 @@ class MainWindow : Window
         // 한번이라도 이동한 경우, 다 맞추었는지 확인!!
     }
 
+    private void SwapBlock(int x1, int y1, int x2, int y2) 
+    {
+        // #1. board 배열의 값 교환
+        int temp = board[y1, x1];
+        board[y1, x1] = board[y2, x2];
+        board[y2, x2] = temp;
 
+        // #2. grid 의 x1, y1 위치에 있는 Image 참조를 얻어서
+        //     x2, y2 위치로 이동
+
+        //        Image img = grid.Children.FirstOfDefault(함수);
+        // => grid의 모든 자식을 함수에 보내서 참을 반환하는 
+        //    첫번째 요소 찾기. 조건을 만족하는 요소가 없으면 
+        //    디폴트 값(null) 반환.
+
+        // 아래 람다표현식의 의미는 "아래 부분의 Foo" 참고 하세요
+        Image img = grid.Children.Cast<Image>().FirstOrDefault(
+                img => Grid.GetRow(img) == y1 && Grid.GetColumn(img) == x1 );  
+
+        if ( img != null)
+        {
+            Grid.SetRow(img, y2);
+            Grid.SetColumn(img, x2);
+        }
+
+    }
+
+    // 위 람다 표현식의 의미는 아래 함수 입니다.
+    /*
+    public bool Foo( Image img )
+    {
+        if (Grid.GetRow(img) == y1 && Grid.GetColumn(img) == x1)
+            return true;
+        return false;
+    }
+    */
 }
 
 
