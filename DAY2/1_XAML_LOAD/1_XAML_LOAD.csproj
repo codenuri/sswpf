@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>_1_XAML_LOAD</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Step1.cs" />
+    <Compile Remove="Step2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Step1.xaml" />
+    <Page Remove="Step2.xaml" />
+    <Page Remove="Step3.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Step1.cs" />
+    <None Include="Step1.xaml" />
+    <None Include="Step2.cs" />
+    <None Include="Step2.xaml" />
+    <None Include="Step3.xaml" />
+  </ItemGroup>
+
+</Project>
