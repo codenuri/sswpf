@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Ex1_XAML.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex2_Background.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex3_Name.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex4_Markup1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex4_Markup2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ex4_Markup3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Ex1_XAML.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex2_Background.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex3_Name.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4_Markup1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4_Markup2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ex4_Markup3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
