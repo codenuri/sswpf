@@ -1,0 +1,24 @@
+﻿<Window x:Class="Step4_Layout.Ex1_Canvas1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step4_Layout"
+        mc:Ignorable="d"
+        Title="Ex1_Canvas1" Height="450" Width="800">
+    
+    <Canvas>
+        <!-- 각 컨트롤을 좌표로 배치하는 Layout -->
+        <!-- Size 조절이 안되는 윈도우를 만들때 적합한 Layout -->
+
+        <Button Content="확인1"
+                Canvas.Left="0" Canvas.Top="0" Width="200" Height="100"/>
+
+        <Button Content="확인2"
+                Canvas.Left="50" Canvas.Top="150" Width="200" Height="100"/>
+
+        <Button Content="확인3"
+                Canvas.Left="100" Canvas.Top="300" Width="200" Height="100"/>
+        
+    </Canvas>
+</Window>
