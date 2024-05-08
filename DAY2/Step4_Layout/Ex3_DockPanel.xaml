@@ -1,0 +1,23 @@
+﻿<Window x:Class="Step4_Layout.Ex3_DockPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step4_Layout"
+        mc:Ignorable="d"
+        Title="Ex3_DockPanel" Height="450" Width="800">
+    
+    <!-- 컨트롤을 panel 의 상하좌우에 배치-->
+    <DockPanel  LastChildFill="False">
+
+        <Button DockPanel.Dock="Top"  Content="확인1"/>
+        <Button DockPanel.Dock="Left" Content="확인2"/>
+        <Button DockPanel.Dock="Right" Content="확인3"/>
+        <Button DockPanel.Dock="Bottom" Content="확인4"/>
+        <Button DockPanel.Dock="Top" Content="확인5"/>
+
+
+    </DockPanel>
+    
+    
+</Window>
