@@ -1,0 +1,29 @@
+﻿<Window x:Class="Step1_XAML.Ex3_Name"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step1_XAML"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Ex3_Name" Height="450" Width="800">
+    
+    <StackPanel>
+
+        <Button Name="button1" Content="확인"/>
+
+        <Button>
+          <!--  <local:MyType Name="mytype" />  에러. MyType에 Name없음 -->
+          <local:MyType x:Name="mytype" />
+        </Button>
+        
+        <Button>
+            <!-- 아래 코드는 에러. String 은 디폴트 생성자가 없습니다. -->
+            <!-- 디폴트 생성자가 있는 것만 x:Name 사용가능-->
+            <!--<system:String x:Name="mystring">Hello</system:String> -->
+            <system:String>Hello</system:String>
+        </Button>
+        
+
+    </StackPanel>
+</Window>
