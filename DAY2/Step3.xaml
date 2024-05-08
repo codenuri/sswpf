@@ -1,0 +1,8 @@
+﻿<local:MainWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:local="clr-namespace:Step3;assembly=1_XAML_LOAD">
+
+    <StackPanel>
+        <Button Name="button1">확인</Button>
+    </StackPanel>
+
+</local:MainWindow>
