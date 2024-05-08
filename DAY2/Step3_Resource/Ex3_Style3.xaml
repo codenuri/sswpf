@@ -1,0 +1,46 @@
+﻿<Window x:Class="Step3_Resource.Ex3_Style3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step3_Resource"
+        mc:Ignorable="d"
+        Title="Ex3_Style3" Height="450" Width="800">
+    <Window.Resources>
+
+        <!-- 동일 타입의 모든 컨트롤에 적용하기 -->
+
+        <Style x:Key="CoolButton">
+
+            <EventSetter Event="FrameworkElement.MouseEnter" Handler="MyMouseEnter"/>
+            <EventSetter Event="FrameworkElement.MouseLeave" Handler="MyMouseLeave"/>
+            
+            <Setter Property="Control.FontFamily" Value="궁서체"/>
+            <Setter Property="Control.FontSize"   Value="40"/>
+            <Setter Property="Control.Foreground" Value="Red"/>
+
+            <!-- Triggers : 상태가 변경될때 스타일 변경 -->
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.FontSize"   Value="80"/>
+                    <Setter Property="Control.Foreground" Value="Blue"/>
+                </Trigger>               
+            </Style.Triggers>
+
+         
+        </Style>
+
+        <Style x:Key="MyStyle">
+            <!-- EventSetter : event가 발생될때  메소드 연결 -->
+            <EventSetter Event="FrameworkElement.MouseEnter" Handler="MyMouseEnter"/>
+            <EventSetter Event="FrameworkElement.MouseLeave" Handler="MyMouseLeave"/>
+        </Style>
+
+    </Window.Resources>
+
+    <StackPanel>
+        <Button Content="확인1" Style="{StaticResource CoolButton}" />
+        <Button Content="확인2" Style="{StaticResource MyStyle}"/>
+
+    </StackPanel>
+</Window>
