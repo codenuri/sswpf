@@ -4,8 +4,8 @@ using System.ComponentModel;
 
 class People : INotifyPropertyChanged
 {
-    private string name;
-    private string address;
+    private string name = null!;
+    private string address = null!;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
