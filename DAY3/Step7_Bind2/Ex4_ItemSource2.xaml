@@ -11,13 +11,19 @@
         <ListBox x:Name="listbox" Canvas.Left="10" Canvas.Top="10" 
                   Width="200" Height="200"/>
 
-        <TextBlock Canvas.Left="300" Canvas.Top="10" Text="ABCD"
-                   FontFamily="{Binding ElementName=listbox, Path=SelectedItem, Mode=OneWay}"/>
+        <TextBlock Canvas.Left="300" Canvas.Top="10" 
+                   Text="{Binding ElementName=txtbox1, Path=Text, Mode=OneWay}"
+                   FontFamily="{Binding ElementName=listbox, Path=SelectedItem, Mode=OneWay}"
+                   FontSize="{Binding ElementName=slider1, Path=Value, Mode=OneWay}"/>
 
 
         <Slider x:Name="slider1" Canvas.Left="300" Canvas.Top="200"
-                Minimum="10" Maximum="100"/>
+                Minimum="10" Maximum="100" Width="300"/>
+
+        <TextBox x:Name="txtbox1" Canvas.Left="300" Canvas.Top="150"
+                 Width="300" Height="40"/>
         
+
     </Canvas>
     
 </Window>
