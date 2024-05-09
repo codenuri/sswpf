@@ -21,6 +21,15 @@
 
         <Button Content="button1" Click="Button_Click"/>
 
+        <Button>
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="AAA" Width="100" />
+                    <Label Content="BBB" Width="100" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
 
     </StackPanel>
     

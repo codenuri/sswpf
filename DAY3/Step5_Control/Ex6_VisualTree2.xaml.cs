@@ -26,7 +26,8 @@ namespace Step5_Control
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            VisualTree vt = new VisualTree();
+            //          VisualTree vt = new VisualTree();
+            Step5_Control.VisualTree vt = new Step5_Control.VisualTree();
 
             vt.BuildVisualTree(this);
 
