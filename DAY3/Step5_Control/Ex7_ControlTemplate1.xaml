@@ -1,0 +1,38 @@
+﻿<Window x:Class="Step5_Control.Ex7_ControlTemplate1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step5_Control"
+        mc:Ignorable="d"
+        Title="Ex7_ControlTemplate1" Height="450" Width="800">
+    
+    <StackPanel>
+
+        <Button Content="button1" Click="Button_Click"/>
+
+        <Button>
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="AAA" Width="100" />
+                    <Label Content="BBB" Width="100" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+        <!-- Contents 를 Ellipse 로 : 버튼의 기본 구조를 변경하는 것이 아니라 Contents에 연결-->
+        <!-- Control Template : 버튼의 기본 구조 자체를 변경하는 것 -->
+        <Button>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Ellipse Width="100" Height="100" Fill="Red"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+        
+        
+    </StackPanel>
+    
+    
+</Window>
