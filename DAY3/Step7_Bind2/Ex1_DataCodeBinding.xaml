@@ -1,0 +1,24 @@
+﻿<Window x:Class="Step7_Bind2.Ex1_DataCodeBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step7_Bind2"
+        mc:Ignorable="d"
+        Title="Ex1_DataCodeBinding" Height="450" Width="800">
+
+    <Canvas>
+        <TextBlock Canvas.Left="10" Canvas.Top="10" Text="" x:Name="txtblock1"/>
+        <TextBlock Canvas.Left="10" Canvas.Top="50" Text="" x:Name="txtblock2"/>
+
+        <TextBox Canvas.Left="10" Canvas.Top="100" Text=""  x:Name="txtbox1" Width="200"/>
+        <TextBox Canvas.Left="10" Canvas.Top="150" Text=""  x:Name="txtbox2" Width="200"/>
+
+        <Button Canvas.Left="10" Canvas.Top="200" Content="변경" Width="200" Click="Button_Click"/>
+
+
+
+    </Canvas>
+    
+    
+</Window>
