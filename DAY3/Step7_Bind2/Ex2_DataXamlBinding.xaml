@@ -13,7 +13,7 @@
         <TextBlock Canvas.Left="10" Canvas.Top="50" Text="{Binding Path=Address, Mode=OneWay}" x:Name="txtblock2"/>
 
         <TextBox Canvas.Left="10" Canvas.Top="100" Text="{Binding Path=Name, Mode=TwoWay}"  x:Name="txtbox1" Width="200"/>
-        <TextBox Canvas.Left="10" Canvas.Top="150" Text="{Binding Path=Name, Mode=TwoWay}"  x:Name="txtbox2" Width="200"/>
+        <TextBox Canvas.Left="10" Canvas.Top="150" Text="{Binding Path=Address, Mode=TwoWay}"  x:Name="txtbox2" Width="200"/>
     
     </Canvas>
     
