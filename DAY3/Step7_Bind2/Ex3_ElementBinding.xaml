@@ -12,7 +12,10 @@
         <Label Content="LABEL1" x:Name="label1"/>
         <Slider x:Name="slider1" Minimum="10" Maximum="100" />
 
-        <Label Content="LABEL2" x:Name="label2"/>
+        <!-- panel 에 data context 에 등록된 객체에 접근시는 element name 없어도 되지만-->
+        <!-- data context 에 등록된 객체가 아닌 다른 객체와 연결시 element name 필요-->
+        <Label FontSize="{Binding ElementName=slider2, Path=Value, Mode=OneWay}"   Content="LABEL2" x:Name="label2"/>
+        
         <Slider x:Name="slider2" Minimum="10" Maximum="100" />
 
     </StackPanel>
