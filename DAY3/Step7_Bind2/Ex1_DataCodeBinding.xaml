@@ -17,6 +17,10 @@
         <Button Canvas.Left="10" Canvas.Top="200" Content="변경" Width="200" Click="Button_Click"/>
 
 
+        <TextBox Canvas.Left="250" Canvas.Top="100" Text=""  x:Name="txtbox3" Width="200"/>
+        <TextBox Canvas.Left="250" Canvas.Top="150" Text=""  x:Name="txtbox4" Width="200"/>
+
+        
 
     </Canvas>
     

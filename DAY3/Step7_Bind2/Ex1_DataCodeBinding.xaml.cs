@@ -23,14 +23,44 @@ namespace Step7_Bind2
         {
             InitializeComponent();
 
-              // 임의의 객체의 속성을 다른 객체의 속성과 연결
+            // 임의의 객체의 속성을 다른 객체의 속성과 연결
             Binding b = new Binding();
             b.Source = p;                       // 이 객체의 
             b.Path = new PropertyPath("Name");  // 이 속성을
             b.Mode = BindingMode.OneWay;        // 단 방향으로
 
             txtblock1.SetBinding( TextBlock.TextProperty, b );
+
+            Binding b2 = new Binding();
+            b2.Source = p;                       
+            b2.Path = new PropertyPath("Address"); 
+            b2.Mode = BindingMode.OneWay;       
+
+            txtblock2.SetBinding(TextBlock.TextProperty, b2);
+
+
+            // 아래 코드는 양방향 연결입니다.
+
+            Binding b3 = new Binding();
+            b3.Source = p;
+            b3.Path = new PropertyPath("Name");
+            b3.Mode = BindingMode.TwoWay;
+
+            txtbox3.SetBinding(TextBox.TextProperty, b3);
+
+            Binding b4 = new Binding();
+            b4.Source = p;
+            b4.Path = new PropertyPath("Address");
+            b4.Mode = BindingMode.TwoWay;
+
+            txtbox4.SetBinding(TextBox.TextProperty, b4);
         }
+
+
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

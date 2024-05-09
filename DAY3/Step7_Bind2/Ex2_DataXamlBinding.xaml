@@ -1,0 +1,20 @@
+﻿<Window x:Class="Step7_Bind2.Ex2_DataXamlBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step7_Bind2"
+        mc:Ignorable="d"
+        Title="Ex2_DataXamlBinding" Height="450" Width="800">
+    
+    <Canvas x:Name="canvas">
+        
+        <TextBlock Canvas.Left="10" Canvas.Top="10" Text="{Binding Path=Name, Mode=OneWay}" x:Name="txtblock1"/>
+        <TextBlock Canvas.Left="10" Canvas.Top="50" Text="{Binding Path=Address, Mode=OneWay}" x:Name="txtblock2"/>
+
+        <TextBox Canvas.Left="10" Canvas.Top="100" Text="{Binding Path=Name, Mode=TwoWay}"  x:Name="txtbox1" Width="200"/>
+        <TextBox Canvas.Left="10" Canvas.Top="150" Text="{Binding Path=Name, Mode=TwoWay}"  x:Name="txtbox2" Width="200"/>
+    
+    </Canvas>
+    
+</Window>
