@@ -6,9 +6,30 @@
         xmlns:local="clr-namespace:Step7_Bind2"
         mc:Ignorable="d"
         Title="Ex4_ItemSource5" Height="450" Width="800">
-    <StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
 
-        <TreeView x:Name="treeview"  TreeViewItem.Expanded="treeview_Expanded"/>
 
-    </StackPanel>
+        <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeview"  
+                  TreeViewItem.Expanded="treeview_Expanded" 
+                  TreeViewItem.Selected="treeview_Selected"/>
+
+        <ListView Grid.Row="0" Grid.Column="1"  x:Name="listview">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="100" 
+                                    DisplayMemberBinding="{Binding Path=Name}"/>
+
+                    <GridViewColumn Header="LastAccessTime" Width="100"
+                                    DisplayMemberBinding="{Binding Path=LastAccessTime}"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+    </Grid>
 </Window>

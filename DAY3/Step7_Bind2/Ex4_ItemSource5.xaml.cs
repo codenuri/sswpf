@@ -107,7 +107,13 @@ namespace Step7_Bind2
 
             }
             Console.WriteLine(path);
+
+            DirectoryInfo dir = new DirectoryInfo(path);
+
+
+            listview.ItemsSource = dir.GetFiles();
         }
+
 
         public ItemsControl GetParent(TreeViewItem item)
         {
