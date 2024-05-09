@@ -86,5 +86,39 @@ namespace Step7_Bind2
 
 
         }
+
+        private void treeview_Selected(object sender, RoutedEventArgs e)
+        {
+            TreeViewItem item = (TreeViewItem)treeview.SelectedItem;
+
+            string path = item.Header.ToString();
+
+            while(item != null )
+            {
+                ItemsControl parent = GetParent(item);
+
+                if (parent is TreeViewItem)
+                {
+                    item = (TreeViewItem)parent;
+                    path = item.Header.ToString() + "\\" + path;
+                }
+                else
+                    break;
+
+            }
+            Console.WriteLine(path);
+        }
+
+        public ItemsControl GetParent(TreeViewItem item)
+        {
+            DependencyObject parent = VisualTreeHelper.GetParent(item);
+
+            while( !(parent is TreeView || parent is TreeViewItem) )
+            {
+                parent = VisualTreeHelper.GetParent(parent);
+            }
+            return (ItemsControl)parent;
+        }
     }
 }
+
