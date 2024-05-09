@@ -1,0 +1,16 @@
+﻿<Window x:Class="Step4_Layout추가.Ex2_WrapPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step4_Layout추가"
+        mc:Ignorable="d"
+        Title="Ex2_WrapPanel" Height="450" Width="800">
+    <WrapPanel Margin="3">
+        <Button Content="확인1" VerticalAlignment="Top"/>
+        <Button Content="확인2" VerticalAlignment="Center"/>
+        <Button Content="확인3" VerticalAlignment="Top"/>
+        <Button Content="확인4"/> 
+        <Button Content="확인5" MinHeight="100"/>
+    </WrapPanel>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="Step5_Control.Ex1_ControlBasic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step5_Control"
+        mc:Ignorable="d"
+        Title="Ex1_ControlBasic" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="243,114,0,0" VerticalAlignment="Top" Height="87" Width="213" Background="#FFA55656"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+    </StackPanel>
+</Window>

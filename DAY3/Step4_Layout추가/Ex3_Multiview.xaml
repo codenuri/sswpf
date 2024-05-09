@@ -1,0 +1,16 @@
+﻿<Window x:Class="Step4_Layout추가.Ex3_Multiview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step4_Layout추가"
+        mc:Ignorable="d"
+        Title="Ex3_Multiview" Height="450" Width="800">
+    
+    <StackPanel>
+
+        <Button x:Name="button1" Content="확인1" Click="button1_Click"/>
+        <Button x:Name="button2" Content="확인2" Click="button2_Click"/>
+
+    </StackPanel>
+</Window>
