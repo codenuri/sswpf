@@ -8,8 +8,9 @@
         Title="Ex4_ItemSource5" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
 
 
@@ -17,7 +18,7 @@
                   TreeViewItem.Expanded="treeview_Expanded" 
                   TreeViewItem.Selected="treeview_Selected"/>
 
-        <ListView Grid.Row="0" Grid.Column="1"  x:Name="listview">
+        <ListView Grid.Row="0" Grid.Column="1"  x:Name="listview" Grid.ColumnSpan="2">
 
             <ListView.View>
                 <GridView>
@@ -31,5 +32,7 @@
 
         </ListView>
 
+        <DataGrid x:Name="datagrid" Grid.Row="0" Grid.Column="2" />
+        
     </Grid>
 </Window>

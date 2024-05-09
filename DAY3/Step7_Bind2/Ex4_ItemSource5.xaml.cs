@@ -110,8 +110,10 @@ namespace Step7_Bind2
 
             DirectoryInfo dir = new DirectoryInfo(path);
 
-
             listview.ItemsSource = dir.GetFiles();
+            datagrid.ItemsSource = dir.GetFiles();
+
+            //listview.ItemsSource = dir.GetDirectories();
         }
 
 
