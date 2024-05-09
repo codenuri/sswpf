@@ -1,0 +1,27 @@
+﻿<Window x:Class="Step5_Control.Ex6_VisualTree2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step5_Control"
+        mc:Ignorable="d"
+        Title="Ex6_VisualTree2" Height="450" Width="800">
+    
+    <StackPanel>
+
+        <TextBlock Text="ABCD"/>
+
+        <Label Content="LABEL"/>
+
+        <ListBox >
+            <ListBox.Items>
+                <Label Content="Item 1"/>
+            </ListBox.Items>
+        </ListBox>
+
+        <Button Content="button1" Click="Button_Click"/>
+
+
+    </StackPanel>
+    
+</Window>
