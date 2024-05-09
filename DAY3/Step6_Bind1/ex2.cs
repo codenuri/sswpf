@@ -42,5 +42,15 @@ class ex2
     public static void Foo(object sender, string property_name)
     {
         Console.WriteLine("속성 변경됨");
+
+        // C# 은 "문자열 로된 속성이름" 을 통해서 속성값을 꺼낼수 있습니다.
+
+        // sender 의 타입 정보를 얻어서
+        Type t = sender.GetType();
+
+        string value = (string)t.GetProperty(property_name).GetValue(sender, null);
+
+        Console.WriteLine($"{property_name} 이 {value} 로 변경됨");
+         
     }
 }
