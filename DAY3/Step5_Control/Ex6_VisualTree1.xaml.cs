@@ -52,11 +52,11 @@ namespace Step5_Control
             // 자신의 타입이 이름을 먼저 출력
             Console.WriteLine($"{separator}{obj.GetType().Name}");
 
-            int cnt = VisualTreeHelper.GetChildrenCount(this);
+            int cnt = VisualTreeHelper.GetChildrenCount(obj);
 
             for (int i = 0; i < cnt; i++)
             {
-                var child = VisualTreeHelper.GetChild(this, i);
+                var child = VisualTreeHelper.GetChild(obj, i);
 
                 ShowChild(separator + "    ", child);
             }
