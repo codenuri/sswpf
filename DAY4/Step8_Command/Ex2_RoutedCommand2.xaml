@@ -1,0 +1,45 @@
+﻿<Window x:Class="Step8_Command.Ex2_RoutedCommand2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step8_Command"
+        mc:Ignorable="d"
+        Title="Ex2_RoutedCommand2" Height="450" Width="800">
+    
+    <!-- XAML 에서 Command 객체 만들어서 사용하기. 반드시 알아두세요. 결국 이 코드가 핵심-->
+    
+    <!-- #1. Resource 에 RoutedCommand 객체를 생성 -->
+    <Window.Resources>
+
+        <RoutedCommand x:Key="cmdLogin"/>
+
+    </Window.Resources>
+    
+    <!-- #2. 명령객체에 함수를 등록하는 CommandBinding 객체를 만들어서 --> 
+    <!--     Window 의 CommandBindings Collection 에등록-->
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource cmdLogin}"
+                        Executed="CommandBinding_Executed"
+                        CanExecute="CommandBinding_CanExecute"/>
+    </Window.CommandBindings>
+    
+    
+    
+    
+    
+    
+    <StackPanel>
+
+        <TextBox x:Name="id_txtbox" Width="200" />
+
+        <CheckBox x:Name="check" Content="동의" Width="200" />
+
+        <!-- #3. 컨트롤의 Command 속성에 리소스에서 만든 명령 객체 연결 -->
+        
+        <Button IsEnabled="True" x:Name="loginbutton" Content="login" Width="200"
+                Command="{StaticResource cmdLogin}"/>
+        
+    </StackPanel>
+</Window>
