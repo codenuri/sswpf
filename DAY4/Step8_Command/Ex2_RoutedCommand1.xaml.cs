@@ -21,6 +21,9 @@ using System.Windows.Shapes;
 // 명령을 만들려면
 // 1. RoutedCommand 타입의 객체한개를 생성하세요
 // 2. 2개의 함수를 만든후에 1번객체에 2개의 함수를 연결하세요 
+//    => 아래 Ex2_RoutedCommand1() 생성자 코드 참고
+//    => Execute 만 등록해도 됩니다.
+
 // 3. 단축키가 필요하면 InputBinding 객체도 만드세요
 
 // 의미
