@@ -13,7 +13,7 @@
         <CheckBox x:Name="check" Content="동의" Width="200" Unchecked="check_Unchecked" Checked="check_Checked"/>
 
         <Button IsEnabled="True" x:Name="loginbutton" Content="login" Width="200"
-                Command="local:MyCommand.cmdLogin"/>
+                Command="local:MyCommand2.cmdLogin"/>
 
 
     </StackPanel>
