@@ -43,6 +43,12 @@ namespace Step8_Command
             binding.CanExecute += CmdCanExecute;
 
             CommandBindings.Add(binding);
+
+
+            InputBinding ib = new InputBinding(MyCommand4.cmdLogin, 
+                                        new KeyGesture(Key.L, ModifierKeys.Control));
+
+            InputBindings.Add(ib);
         }
 
         private void CmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
