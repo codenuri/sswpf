@@ -30,6 +30,8 @@ namespace Step8_Command
 
         public bool CanExecute(object? parameter)
         {
+            Console.WriteLine("Called CanExecute");
+
             Ex1_Command3 win = (Ex1_Command3)(Application.Current.MainWindow);
 
             bool b = false;
