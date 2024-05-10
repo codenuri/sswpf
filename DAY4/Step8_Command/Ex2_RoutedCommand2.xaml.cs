@@ -37,5 +37,14 @@ namespace Step8_Command
             e.CanExecute = (!string.IsNullOrEmpty(id_txtbox.Text)) && check.IsChecked.Value;
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // cmdLogin 객체를 실행해 보세요
+
+            RoutedCommand cmd = (RoutedCommand)this.Resources["cmdLogin"];
+
+            cmd.Execute(this, null);
+        }
     }
 }
