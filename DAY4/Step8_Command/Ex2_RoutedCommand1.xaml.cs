@@ -12,6 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+// 지금 까지 내용 정리
+// 하나의 명령은 
+// 1. 실행될때 "해야 할일" 
+// 2. "실행가능한가" 를 판단하는 (UI 의 enable/disable) 판단
+// => 2개의 함수 필요
+
+// 명령을 만들려면
+// 1. RoutedCommand 타입의 객체한개를 생성하세요
+// 2. 2개의 함수를 만든후에 1번객체에 2개의 함수를 연결하세요 
+// 3. 단축키가 필요하면 InputBinding 객체도 만드세요
+
+// 의미
+// 하나의 명령을 "여러가지 소스를 통해서" 실행가능
+// => 버튼, 단축키, 메뉴, 툴바 등.. 
+
+
+
 namespace Step8_Command
 {
     
@@ -45,10 +62,13 @@ namespace Step8_Command
             CommandBindings.Add(binding);
 
 
+            // #1. 단축키 객체를 생성해서 명령 객체와 연결
             InputBinding ib = new InputBinding(MyCommand4.cmdLogin, 
                                         new KeyGesture(Key.L, ModifierKeys.Control));
 
-            InputBindings.Add(ib);
+            // 모든 윈도우는 "단축키를 관리하는 Collection" 을 가지고 있습니다.
+            // 단축키 객체를 만든후에는 Collection 에 등록해야 합니다.
+            this.InputBindings.Add(ib);
         }
 
         private void CmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -58,7 +78,14 @@ namespace Step8_Command
         }
         private void CmdExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            Console.WriteLine("Execute Login");
+            // 어떤 객체를 통해서 실행되었는지 확인하는 코드
+            // => 버튼을 눌러서 명령이 실행되었는지
+            // => 단축키를 통해서 실행되었는지
+            //Type t = sender.GetType();
+            Type t = e.OriginalSource.GetType();
+
+            Console.WriteLine($"Execute Login : {t.Name}");            
+            
         }
 
     }
