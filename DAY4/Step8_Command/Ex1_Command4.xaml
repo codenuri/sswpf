@@ -8,13 +8,14 @@
         Title="Ex1_Command4" Height="450" Width="800">
     <StackPanel>
 
-        <TextBox x:Name="id_txtbox" Width="200" TextChanged="id_txtbox_TextChanged"/>
+        <TextBox x:Name="id_txtbox" Width="200" />
 
-        <CheckBox x:Name="check" Content="동의" Width="200" Unchecked="check_Unchecked" Checked="check_Checked"/>
+        <CheckBox x:Name="check" Content="동의" Width="200" />
 
         <Button IsEnabled="True" x:Name="loginbutton" Content="login" Width="200"
                 Command="local:MyCommand3.cmdLogin"/>
 
+        <TextBox Text="LogIn과 관련없는 Control" Width="200" />
 
     </StackPanel>
 </Window>

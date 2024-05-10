@@ -16,15 +16,25 @@ namespace Step8_Command
 {
     class LogInCommand3 : ICommand
     {
-        // LogIn 버튼이 아래 델리게이트에 함수를 등록하게 됩니다.
+        //        public event EventHandler? CanExecuteChanged;
 
-        public event EventHandler? CanExecuteChanged;
 
-        // 아래 함수는 아무 이름이나 사용해도 됩니다.
-        public void FireCanExecute()
+        // 버튼에 "이 클래스 객체" 를 연결할때
+        // 버튼은 자신의 함수를 CanExecuteChanged 에 등록하게 됩니다.
+        // 이때 "add" 부분이 호출됩니다.
+
+        public event EventHandler? CanExecuteChanged
         {
-            // CanExecute 를 다시 호출해 달라고 요청합니다.
-            CanExecuteChanged(this, EventArgs.Empty);
+            add 
+            {
+                // 아래 코드에서 value 는 버튼의 이 등록한 함수 입니다.
+                // 즉, "CanExecuteChanged" 에 등록한 함수.
+                CommandManager.RequerySuggested += value;
+            }
+            remove 
+            {
+                CommandManager.RequerySuggested -= value;
+            }
         }
 
         public bool CanExecute(object? parameter)
@@ -61,17 +71,6 @@ namespace Step8_Command
         {
             InitializeComponent();
         }
-        private void id_txtbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            MyCommand3.cmdLogin.FireCanExecute();
-        }
-        private void check_Checked(object sender, RoutedEventArgs e)
-        {
-            MyCommand3.cmdLogin.FireCanExecute();
-        }
-        private void check_Unchecked(object sender, RoutedEventArgs e)
-        {
-            MyCommand3.cmdLogin.FireCanExecute();
-        }
+        
     }
 }
