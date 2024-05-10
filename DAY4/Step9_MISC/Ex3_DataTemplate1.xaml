@@ -1,0 +1,53 @@
+﻿<Window x:Class="Step9_MISC.Ex3_DataTemplate1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step9_MISC"
+        mc:Ignorable="d"
+        Title="Ex3_DataTemplate1" Height="450" Width="800"
+        
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        >
+
+    <StackPanel >
+
+        <Button Content="button1" Width="200" Height="100" Background="Yellow">
+
+            <Button.Template>
+
+                <!-- Control Template : Control 자체를 만드는 방법(틀)을 변경하는 것 -->
+                <ControlTemplate TargetType="Button">
+
+                    <Grid>
+                        <Ellipse Width="{TemplateBinding Width}" 
+                                 Height="{TemplateBinding Height}" Fill="Yellow"/>
+
+                        <!-- 이 위치에 Contents 을 표시해 달라 -->
+                        <ContentPresenter />
+                    </Grid>
+                </ControlTemplate>
+
+            </Button.Template>
+            
+            <!-- Button 자체가 아닌 Content 에대한 template -->
+            <Button.ContentTemplate>
+
+                <DataTemplate>
+
+                    <TextBlock Text="{Binding}" FontSize="30" FontWeight="Bold"/>
+
+                </DataTemplate>
+
+            </Button.ContentTemplate>
+
+
+        </Button>
+        
+        
+    </StackPanel>
+
+</Window>
