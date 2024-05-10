@@ -1,0 +1,21 @@
+﻿<Window x:Class="Step8_Command.Ex2_RoutedCommand1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Step8_Command"
+        mc:Ignorable="d"
+        Title="Ex2_RoutedCommand1" Height="450" Width="800">
+    <StackPanel>
+
+        <TextBox x:Name="id_txtbox" Width="200" />
+
+        <CheckBox x:Name="check" Content="동의" Width="200" />
+
+        <Button IsEnabled="True" x:Name="loginbutton" Content="login" Width="200"
+                Command="local:MyCommand4.cmdLogin"/>
+
+        <TextBox Text="LogIn과 관련없는 Control" Width="200" />
+
+    </StackPanel>
+</Window>
