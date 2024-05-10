@@ -8,17 +8,15 @@
         Title="View" Height="450" Width="800">
 
     <Window.Resources>
-
         <local:ViewModel x:Key="viewmodel" />
-
     </Window.Resources>
-    
-    
+        
     <Canvas DataContext="{StaticResource viewmodel}">
 
         <ComboBox x:Name="combo" Width="200" Height="30"
                   Canvas.Left="10" Canvas.Top="10"
-                  ItemsSource="{Binding ModelData}"/>
+                  ItemsSource="{Binding ModelData}"
+                  DisplayMemberPath="Title"/>
 
         <TextBox x:Name="txtbox" Width="200" Height="30"
                  Canvas.Left="10" Canvas.Top="100"

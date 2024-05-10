@@ -40,7 +40,7 @@ namespace Step10_MVVM
         }
 
         // View 에서 국가명을 사용하기 위해
-        public Model ModelData { get => model; }
+        public List<Currency> ModelData { get => model.clist; }
     }
 
 }
