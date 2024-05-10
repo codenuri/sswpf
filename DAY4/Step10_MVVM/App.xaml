@@ -1,0 +1,9 @@
+﻿<Application x:Class="Step10_MVVM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Step10_MVVM"
+             StartupUri="View.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
